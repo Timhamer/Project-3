@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a class="textlink" href="WalrusMenu.php">Menukaart</a>
+    <a class="textlink" href="arrangementen.php">Arrangementen</a>
+    <a class="textlink" href="Reserveren.php">Reserveren</a>
+    <a class="textlink" href="contact.php">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+</body>
+
+</html>
