@@ -103,4 +103,48 @@ color: grey;
     } 
   }  
 
+  .bestelrow {
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    font-family: 'Montserrat';
+  }
+  .bestelcolumntekst {
+    float: left;
+    width: 230px;
+    margin-top: 0%;
+    padding: 50px 0 0 10px; 
+    text-align: center;
+  }
+  .bestelcolumninvul {
+  float: left;
+  width: 230px;
+  margin-top: 0%;
+  padding: 15px 0 0 10px; 
+}
+  .bestelgegevens {
+    border-radius: 5px;
+    padding: 10px 0 10px 0;
+  }
 
+  .bestelbtn {
+    background: black;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 15px; ;
+    height: 40px;
+    color: white;
+  }
+
+  .bestelbtn:hover {
+    color: black;
+    background: white;
+  }
+
+  .bestelborder {
+    border-color: black;
+    border 
+  }
