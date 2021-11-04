@@ -1,25 +1,27 @@
 <?php
 include "config.php";
 
-
 if(isset($_POST['but_submit'])){
 
     $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
     $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
 
     if($uname != "" && $password != ""){
-        
-        $sql_query = "select count(*) as cntUser from users where username='".$uname."' and password='".$password."'";
+
+        $sql_query = "select count(*) as Count from users where naam='".$uname."' and wachtwoord='".$password."'";
         $result = mysqli_query($con,$sql_query);
-        if (mysqli_num_)
+        $row = mysqli_fetch_array($result);
+        $count = $row['Count'];
 
-        $count = $row['cntUser'];
-
-        if($count > 0){
+        if ($count > 0){
+            //succes
             $_SESSION['uname'] = $uname;
-            header('Location: home.php');        
-        }else{
-            echo "Invalid username and password";
+            header("Location:home.php");
+             exit();   
+        }
+        else {
+            //failed
+            echo "<script>alert('invalid password')</script>";
         }
     }
 }

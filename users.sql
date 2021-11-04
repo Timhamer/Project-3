@@ -11,5 +11,5 @@ CREATE TABLE 'users' (
   `Email` varchar(80) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `users` (`id`, `Naam`, `Wachtwoord`, `Factuuradres`, 'Factuurpostcode', 'Adres', 'Postcode', 'Tel', 'Email') VALUES
+INSERT INTO `users` (id, Naam, Wachtwoord, Factuuradres, Factuurpostcode, Adres, Postcode, Tel, Email) VALUES
 (1, 'Arwin', 'Arwin', 'Noard 129', '8711AD', 'Noard 129', '8711AD', '0612805462', 'walsweerar@gmail.com')
