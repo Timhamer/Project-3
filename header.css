@@ -5,6 +5,10 @@
     list-style: none;
 }
 
+body {
+  font-family: 'Montserrat';
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -66,18 +70,16 @@
 color: grey;
 }
 
-.dropdown_icon {
-  position: absolute;
-
-
-}
-
 #check {
   display: none;
 }
 
 .checkbtn {
   color: white;
+}
+
+.checkbtn:hover {
+  color:grey;
 }
 
    @media screen and (max-width: 700px) {
@@ -102,5 +104,95 @@ color: grey;
       background-color: #101010;
     } 
   }  
+  .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
+    margin: 10%;
+  }
+  
+  .content-table thead tr {
+    background-color: #101010;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #101010;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #101010;
+  }
+
+  .bestelrow {
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    font-family: 'Montserrat';
+  }
+  .bestelcolumntekst {
+    float: left;
+    width: 230px;
+    margin-top: 0%;
+    padding: 50px 0 0 10px; 
+    text-align: center;
+  }
+  .bestelcolumninvul {
+  float: left;
+  width: 230px;
+  margin-top: 0%;
+  padding: 15px 0 0 10px; 
+}
+  .bestelgegevens {
+    border-radius: 5px;
+    padding: 10px 0 10px 0;
+  }
+
+  .bestelbtn {
+    background: black;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 15px; ;
+    height: 40px;
+    color: white;
+  }
+
+  .bestelbtn:hover {
+    color: black;
+    background: white;
+  }
+
+  .bestelborder {
+    border-color: black;
+    border: black;
+    border-style: solid;
+    border-width: 5px;
+    margin:0 30% 0 30%; 
+    padding: 0 0 50px 0;
+    border-radius: 20px;
 
 
+  }
