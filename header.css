@@ -196,3 +196,51 @@ color: grey;
 
 
   }
+  /* klanten overzicht */
+  .password {
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .inlog_gegevens {
+    text-decoration:underline;
+
+  }
+   
+
+  .bedrijfsnaam{
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .bedrijf_gegevens {
+    text-decoration: underline;
+  }
+
+.klant-toevoegen {
+  padding: 10px 60px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.klant-toevoegen:hover {
+  background-color: white;
+  color: black;
+}
+/* .bedrijf-gegevens {
+  justify-content: center;
+} */
+
+.blok {
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+}
+.blok > div{
+  padding: 0px 100px 10px 10px;
+
+}
+.blok > input {
+  background: transparent;
+}
