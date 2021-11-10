@@ -10,15 +10,17 @@
     height: 270px;
     box-shadow: 0px 2px 2px 0px gray;
     margin: 0 auto;
+    margin-top: 30%;
 }
 
 #div_login h1{
     margin-top: 0px;
     font-weight: normal;
     padding: 10px;
-    background-color: cornflowerblue;
+    background-color: grey;
     color: white;
     font-family: sans-serif;
+    text-align: center;
 }
 
 #div_login div{
@@ -35,7 +37,13 @@
 #div_login input[type=submit]{
     padding: 7px;
     width: 100px;
-    background-color: lightseagreen;
+    background-color: rgb(161, 161, 161);
     border: 0px;
     color: white;
+    margin-left: 39%;
+    margin-top: 5%;
+}
+
+#div_login input[type=submit]:hover{
+    background-color: grey;
 }
