@@ -1,8 +1,12 @@
 <?php
 include "config.php";
 
-if(!isset($_SESSION[''])){
-    echo 'Hello world';
+
+
+if($_SESSION['rol'] == 1){
+    echo 'Admin';
+}else {
+    echo 'Klant';
 }
 
 if(!isset($_SESSION['uname'])){

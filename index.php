@@ -6,16 +6,22 @@ if(isset($_POST['but_submit'])){
     $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
     $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
 
+
+    $rol = "select rol as rolcount from users where naam='".$uname."' and wachtwoord ='".$password."'";
+    $resultrol = mysqli_query($con,$rol);
+    $rowrol = mysqli_fetch_array($resultrol);
+    $countrol = $rowrol['rolcount'];
+
     if($uname != "" && $password != ""){
 
         $sql_query = "select count(*) as Count from users where naam='".$uname."' and wachtwoord='".$password."'";
         $result = mysqli_query($con,$sql_query);
         $row = mysqli_fetch_array($result);
         $count = $row['Count'];
-
         if ($count > 0){
             //succes
             $_SESSION['uname'] = $uname;
+            $_SESSION['rol'] = $countrol;
             header("Location:home.php");
              exit();   
         }
