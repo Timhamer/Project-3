@@ -285,7 +285,31 @@ color: grey;
   padding: 0px 100px 10px 10px;
   
 
+<<<<<<< Updated upstream
 }
 .blok > input {
   background: transparent;
 }
+=======
+
+.bestelrow{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.bestelcolumn{
+  float: left;
+  width: 45%;
+  text-align: left;
+  padding: 15px 0 0 2.5%;
+}
+
+.bestelgegevens{
+  float: left;
+  width: 30%;
+  text-align: left;
+  padding: 5px;
+  margin-right: 10%;
+
+}
+>>>>>>> Stashed changes
