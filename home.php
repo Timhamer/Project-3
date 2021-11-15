@@ -4,7 +4,8 @@ include "config.php";
 
 
 if($_SESSION['rol'] == 1){
-    echo 'Admin';
+    header("location:klantenoverzicht.php");
+    exit();
 }else {
     echo 'Klant';
 }
