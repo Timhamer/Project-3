@@ -5,10 +5,17 @@
   <meta charset="utf-8" />
    <link rel="stylesheet" href="header.css">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="overzicht.js">
+   <link rel="stylesheet" href="overzicht.js">'
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <body>
+  <script>
+    function changeIcon(){
+
+    }
+
+  </script>
   <center>
     <table class="content-table">
         <thead>
@@ -26,23 +33,26 @@
             <td>Sneek</td>
             <td>1</td>
             <td>1</td>
+            <td><a onclick="changeIcon()"class="afgerond"><i class="far fa-check-circle"></i></a>  <a><i class="far fa-times-circle"></i></a></td>
           </tr>
           <tr class="active-row">
             <td>Tim</td>
             <td>Sneek</td>
             <td>1</td>
             <td>1</td>
+            <td><a class="afgerond"><i class="far fa-check-circle"></i></a> <a><i class="far fa-times-circle"></i></a></td>
           </tr>
           <tr>
             <td>Arwin</td>
             <td>Workum</td>
             <td>1</td>
             <td>1</td>
-            <td><button class="afgerond"></button></td>
+            <td><a class="afgerond"><i class="far fa-check-circle"></i></a> <a><i class="far fa-times-circle"></i></a></td>
+
           </tr>
         </tbody>
       </table>
     </center>
-  <script src="./src/tablesort.js"></script>
+  
 </body>
 </html>
