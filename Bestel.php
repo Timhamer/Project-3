@@ -10,7 +10,7 @@ if(!$_POST){
         die( 'Connect Error: ' . $mysqli->connect_errno . ': ' . $mysqli->connect_error );
     }
     
-    $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Voornaam`, `E-mail`, `Tussenvoegsel`, `Adres`, `Achternaam`, `Postcode`, `Telefoonnummer`, `Status`) VALUES (?,?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Voornaam`, `E-mail`, `Tussenvoegsel`, `Adres`, `Achternaam`, `Postcode`, `Telefoonnummer`) VALUES (?,?,?,?,?,?,?,?)";
     $_POST['Aantal'] ?? 0;
     $status = 0;
 
