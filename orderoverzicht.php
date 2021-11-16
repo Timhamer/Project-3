@@ -1,4 +1,4 @@
-<table border="1"><tr><th>id</th><th>Aantal</th><th>Naam</th><th>Adres</th><th>E-mail</th><th>Telefoonnummer</th></tr>
+<table border="1"><tr><th>id</th><th>Aantal</th><th>Naam</th><th>Adres</th><th>E-mail</th><th>Telefoonnummer</th><th>Factuur adres</th></tr>
 <?php
 $mysqli = new mysqli("localhost","root","","biermanagement");
 
@@ -19,6 +19,7 @@ if ($result = $mysqli->query($sql)) {
         <td> " . $row['Adres'] . ' ' . $row['Postcode'] . "</td>
         <td>". $row['E-mail'] . "</td>
         <td> " . $row['Telefoonnummer'] . "</td>
+        <td> " . $row['Factuur adres'] . "</td>
     </tr>";
   }
   $result -> free_result();
