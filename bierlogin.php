@@ -18,7 +18,7 @@ if(isset($_POST['but_submit'])){
             $_SESSION['uname'] = $uname;
             header('Location: home.php');        
         }else{
-            echo "Invalid username and password";
+            echo "Invalid username or password";
         }
     }
 }
