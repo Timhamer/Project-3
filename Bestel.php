@@ -1,14 +1,9 @@
 
 
 <?php
-<<<<<<< Updated upstream
 if(!$_POST){
   (header("location: bestel.html"));
 }
-=======
-
-
->>>>>>> Stashed changes
     $mysqli = new mysqli("localhost","root","","biermanagement");
     
     if ( $mysqli->connect_error ) {

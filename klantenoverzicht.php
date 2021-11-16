@@ -40,7 +40,6 @@
             <th>Postcode</th>
             <th>Tel</th>
             <th>E-mail</th>
-            <th>Rol</th>
             <th>Actie</th>
           </tr>
         </thead>
@@ -55,14 +54,13 @@
         <tbody>
           <tr>
             <td><?php echo $data['id']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Naam']; ?>"onBlur="saveInlineEdit(this,'Naam', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Naam']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Wachtwoord']; ?>"onBlur="saveInlineEdit(this,'Wachtwoord', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Wachtwoord']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Factuuradres']; ?>"onBlur="saveInlineEdit(this,'Factuuradres', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Factuuradres']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Adres']; ?>"onBlur="saveInlineEdit(this,'Adres', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Adres']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Postcode']; ?>"onBlur="saveInlineEdit(this,'Postcode', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Postcode']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Tel']; ?>"onBlur="saveInlineEdit(this,'Tel', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Tel']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Email']; ?>"onBlur="saveInlineEdit(this,'Email', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Email']; ?></td>
-            <td contenteditable="true" data-old_value="<?php echo $data['Rol']; ?>"onBlur="saveInlineEdit(this,'Rol', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Rol']; ?></td>
+            <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Naam']; ?>"onBlur="saveInlineEdit(this,'Naam', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Naam']; ?></td>
+            <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Wachtwoord']; ?>"onBlur="saveInlineEdit(this,'Wachtwoord', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Wachtwoord']; ?></td>
+            <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Factuuradres']; ?>"onBlur="saveInlineEdit(this,'Factuuradres', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Factuuradres']; ?></td>
+            <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Adres']; ?>"onBlur="saveInlineEdit(this,'Adres', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Adres']; ?></td>
+            <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Postcode']; ?>"onBlur="saveInlineEdit(this,'Postcode', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Postcode']; ?></td>
+            <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Tel']; ?>"onBlur="saveInlineEdit(this,'Tel', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Tel']; ?></td>
+            <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Email']; ?>"onBlur="saveInlineEdit(this,'Email', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Email']; ?></td>
             <td><?php echo '<form action="" method="POST"><input type="hidden" name="id" value=' . $data['id'] . '><input type="submit"
             class="btn-delete" name="submit" value="Delete"></form>' ?> </td>
           </tr>

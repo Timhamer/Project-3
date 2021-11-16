@@ -38,7 +38,7 @@ include "config.php";
         if ($isValid && !filter_var($email, FILTER_VALIDATE_EMAIL)){
             $isValid = false;
             $error_message = "E-mail is niet geldig.";
-        }
+        } 
 
         if($isValid){
 

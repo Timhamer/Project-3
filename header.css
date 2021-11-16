@@ -386,3 +386,14 @@ color: grey;
 #div_login input[type=submit]:hover{
   background-color: grey;
 }
+
+.zonderaccount {
+  font-family: 'Montserrat';
+  font-size: 100%;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+
+.zonderaccount a {
+  text-decoration: underline;
+}
