@@ -12,7 +12,6 @@ if(!$_POST){
     
     $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Voornaam`, `E-mail`, `Tussenvoegsel`, `Adres`, `Achternaam`, `Postcode`, `Telefoonnummer`) VALUES (?,?,?,?,?,?,?,?)";
     $_POST['Aantal'] ?? 0;
-    $status = 0;
 
     $insert = $mysqli->prepare($sql);
     $insert->bind_param('isssssss', $_POST['Aantal'], $_POST['Voornaam'], $_POST['E-mail'], $_POST['Tussenvoegsel'], $_POST['Adres'], $_POST['Achternaam'], $_POST['Postcode'], $_POST['Telefoonnummer']);
@@ -22,8 +21,9 @@ if(!$_POST){
         echo "
           <center>
             <body style='font-size:x-large;'>
-              <strong>Goedzo<strong>
-              <br>Uw bestelling is succesvol verstuurd.
+           Uw bestelling is succesvol verstuurd.
+            <br>
+            <strong>Bedankt voor uw bestelling<strong>
               <br>
             </div>
           </center>";
