@@ -21,8 +21,9 @@ if(!$_POST){
         echo "
           <center>
             <body style='font-size:x-large;'>
-              <strong>Goedzo<strong>
-              <br>Uw bestelling is succesvol verstuurd.
+           Uw bestelling is succesvol verstuurd.
+            <br>
+            <strong>Bedankt voor uw bestelling<strong>
               <br>
             </div>
           </center>";
