@@ -112,7 +112,7 @@ color: grey;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
-    margin: 10%;
+    margin-top: 4%;
   }
   
   .content-table thead tr {
@@ -302,5 +302,9 @@ color: grey;
   margin-left: 20%;
 }
 
-  
+.terug {
+  text-decoration: none;
+  color: #101010;
+  text-align: center;
+}
 

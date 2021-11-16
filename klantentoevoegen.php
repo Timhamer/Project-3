@@ -106,6 +106,7 @@ include "config.php";
             <h4 class="wachtwoord_eisen">- Speciaal teken</h4>
             <h4 class="wachtwoord_eisen">- 8 Caracters</h4><br><br><br>
             <button type="submit" name="btnsignup" class="klant-toevoegen">Voeg toe</button>
+            <h2><a class="terug" href="klantenoverzicht.php">Terug naar klantenoverzicht</a></h2>
     </div>
 </div>
 

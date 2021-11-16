@@ -1,4 +1,7 @@
 <?php include "config.php"; ?>
+
+
+
 <!DOCTYPE html>
 <head>
   <title>Sorting Tables w/ JavaScript</title>
@@ -6,14 +9,26 @@
   <meta charset="utf-8" />
    <link rel="stylesheet" href="header.css">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="overzicht.js">'
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+   <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+   <script type="text/javascript" src="script/functions.js"></script>
+   <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/> 
 </head>
 
 <body>
-  <?php include "header.html"; ?>
+  <?php include "header.html"; 
+    if(isset($_REQUEST['submit'])){
+      $sql = "DELETE FROM users WHERE id = {$_REQUEST['id']}";
+      if(mysqli_query($con, $sql)){
+        $success_message = "Account Verwijderd.";
+      }else {
+        $error_message = "Account verwijderen mislukt";
+      }
+    }
+  ?>
   <center>
   <h2 class="klantenh2"> Klantenoverzicht </h2>
+  <div>
     <table class="content-table">
         <thead>
           <tr>
@@ -25,7 +40,8 @@
             <th>Postcode</th>
             <th>Tel</th>
             <th>E-mail</th>
-            <th>rol</th>
+            <th>Rol</th>
+            <th>Actie</th>
           </tr>
         </thead>
 
@@ -35,24 +51,28 @@
             while($data = mysqli_fetch_array($records)){
           ?>
             
-
+            
         <tbody>
           <tr>
-            <td><?php echo $data['id'] ?></td>
-            <td><?php echo $data['Naam'] ?></td>
-            <td><?php echo $data['Wachtwoord'] ?></td>
-            <td><?php echo $data['Factuuradres'] ?></td>
-            <td><?php echo $data['Adres'] ?></td>
-            <td><?php echo $data['Postcode'] ?></td>
-            <td><?php echo $data['Tel'] ?></td>
-            <td><?php echo $data['Email'] ?></td>
-            <td><?php echo $data['Rol'] ?></td>
+            <td><?php echo $data['id']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Naam']; ?>"onBlur="saveInlineEdit(this,'Naam', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Naam']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Wachtwoord']; ?>"onBlur="saveInlineEdit(this,'Wachtwoord', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Wachtwoord']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Factuuradres']; ?>"onBlur="saveInlineEdit(this,'Factuuradres', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Factuuradres']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Adres']; ?>"onBlur="saveInlineEdit(this,'Adres', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Adres']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Postcode']; ?>"onBlur="saveInlineEdit(this,'Postcode', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Postcode']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Tel']; ?>"onBlur="saveInlineEdit(this,'Tel', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Tel']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Email']; ?>"onBlur="saveInlineEdit(this,'Email', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Email']; ?></td>
+            <td contenteditable="true" data-old_value="<?php echo $data['Rol']; ?>"onBlur="saveInlineEdit(this,'Rol', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Rol']; ?></td>
+            <td><?php echo '<form action="" method="POST"><input type="hidden" name="id" value=' . $data['id'] . '><input type="submit"
+            class="btn-delete" name="submit" value="Delete"></form>' ?> </td>
           </tr>
         </tbody>
         <?php
           }
         ?>
       </table>
+      <h2><a href="klantentoevoegen.php">Klanten toevoegen</a></h2>
+        </div>
     </center>
   <?php mysqli_close($con); ?>
 </body>
