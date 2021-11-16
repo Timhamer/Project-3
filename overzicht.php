@@ -8,6 +8,7 @@
             <th>E-mail</th>
             <th>Telefoonnummer</th>
             <th>Status</th>
+            <th>Delete</th>
           </tr>
         </thead>
 <?php
@@ -38,6 +39,13 @@ $sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
             // toon grijs vinkje (geen link)
            echo "<td> <i class='far fa-check-circle'></i></td>";
         }
+        if($row['Status'] == 0){
+          // niet afgehandeld. Toon deleteknop (linkje) en groen vinkje (linkje)
+         echo "<td> <a class='afgerond' href='updatestatus.php?id=".$row['id']."'><i class='fas fa-trash-alt'></i></td>";
+      }else{
+          // toon grijs vinkje (geen link)
+         echo "";
+      }
  
       
   }

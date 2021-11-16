@@ -15,7 +15,7 @@ if(!$_POST){
     $status = 0;
 
     $insert = $mysqli->prepare($sql);
-    $insert->bind_param('issssssss', $_POST['Aantal'], $_POST['Voornaam'], $_POST['E-mail'], $_POST['Tussenvoegsel'], $_POST['Adres'], $_POST['Achternaam'], $_POST['Postcode'], $_POST['Telefoonnummer'], $status);
+    $insert->bind_param('isssssss', $_POST['Aantal'], $_POST['Voornaam'], $_POST['E-mail'], $_POST['Tussenvoegsel'], $_POST['Adres'], $_POST['Achternaam'], $_POST['Postcode'], $_POST['Telefoonnummer']);
     
     
     if ($insert->execute())  {
