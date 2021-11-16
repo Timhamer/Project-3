@@ -67,7 +67,7 @@ include "config.php";
     ?>
 </head>
 <body>
-
+    <center>
     <form method="post" action="">
         <?php 
         if(!empty($error_message)){
@@ -109,6 +109,6 @@ include "config.php";
             <h2><a class="terug" href="klantenoverzicht.php">Terug naar klantenoverzicht</a></h2>
     </div>
 </div>
-
+    </center>
 </body>
 </html>
