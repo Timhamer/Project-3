@@ -36,11 +36,11 @@ if(isset($_POST['but_submit'])){
 <html lang="NL">
     <head>
         <title>Login</title>
-        <link rel="stylesheet" href="css/bier.css">
+        <link rel="stylesheet" href="header.css">
     </head>
 
     <body>
-        <div class="container">
+        <div class="container3">
             <form method="post" action = "">
                 <div id="div_login">
                     <h1>Login</h1>
@@ -52,7 +52,9 @@ if(isset($_POST['but_submit'])){
                     </div>
                     <div>
                         <input type="submit" value="Submit" name="but_submit" id="but_submit" />
+                        <h2 class="zonderaccount">Of klik <a href="bestel.php">hier</a> om verder te gaan zonder account.</h2>
                     </div>
+                   
                 </div>
             </form>
         </div>
