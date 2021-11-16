@@ -8,7 +8,6 @@
             <th>E-mail</th>
             <th>Telefoonnummer</th>
             <th>Status</th>
-            <th>Delete</th> 
           </tr>
         </thead>
 <?php
@@ -22,8 +21,8 @@ if ($mysqli -> connect_errno) {
 
 $sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
 
-if ($result = $mysqli->query($sql)) {
-  foreach ($result as $row) {
+  if ($result = $mysqli->query($sql)) {
+    foreach ($result as $row) {
     echo "
     <tr>
         <td>" . $row['id'] . "</td> 
@@ -39,9 +38,8 @@ if ($result = $mysqli->query($sql)) {
             // toon grijs vinkje (geen link)
            echo "<td> <i class='far fa-check-circle'></i></td>";
         }
-        echo "
-        <td><a class='afgerond' href='deleteorder.php?id=".$row['id']."'><i class='fas fa-check-circle'></i></a></td>
-        </tr>";
+ 
+      
   }
   $result -> free_result();
 }
