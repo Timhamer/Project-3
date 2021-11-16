@@ -41,9 +41,9 @@ $sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
         }
         if($row['Status'] == 0){
           // niet afgehandeld. Toon deleteknop (linkje) en groen vinkje (linkje)
-         echo "<td> <a class='afgerond' href='updatestatus.php?id=".$row['id']."'><i class='fas fa-trash-alt'></i></td>";
+         echo "<td> <a class='afgerond' href='deleteorder.php?id=".$row['id']."'><i class='fas fa-trash-alt'></i></td>";
       }else{
-          // toon grijs vinkje (geen link)
+          // delete knop weg.com.
          echo "";
       }
  
