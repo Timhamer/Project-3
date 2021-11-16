@@ -9,10 +9,16 @@
         die( 'Connect Error: ' . $mysqli->connect_errno . ': ' . $mysqli->connect_error );
     }
     
+<<<<<<< Updated upstream
     $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Voornaam`, `E-mail`, `Tussenvoegsel`, `Adres`, `Achternaam`, `Postcode`, `Telefoonnummer`) VALUES (?,?,?,?,?,?,?,?)";
+=======
+    $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Voornaam`, `E-mail`, `Tussenvoegsel`, `Adres`, `Achternaam`, `Postcode`, `Telefoonnummer`, `Status`) VALUES (?,?,?,?,?,?,?,?,?)";
+    $_POST['Aantal'] ?? 0;
+>>>>>>> Stashed changes
+
 
     $insert = $mysqli->prepare($sql);
-    $insert->bind_param('isssssss', $_POST['Aantal'], $_POST['Voornaam'], $_POST['E-mail'], $_POST['Tussenvoegsel'], $_POST['Adres'], $_POST['Achternaam'], $_POST['Postcode'], $_POST['Telefoonnummer']);
+    $insert->bind_param('isssssss', $_POST['Aantal'], $_POST['Voornaam'], $_POST['E-mail'], $_POST['Tussenvoegsel'], $_POST['Adres'], $_POST['Achternaam'], $_POST['Postcode'], $_POST['Telefoonnummer'], $_POST['Status']);
     
     
     if ($insert->execute())  {
