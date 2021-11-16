@@ -14,7 +14,7 @@ if ($result = $mysqli->query($sql)) {
     echo "
     <tr>
         <td>" . $row['id'] . "</td> 
-        <td>" . $row['Aantal'] . "</td> 
+        <td>" . $row['Aantal'] . " Flesjes" . "</td> 
         <td>" . $row['Voornaam']  .  ' ' . $row['Tussenvoegsel'] . ' ' . $row['Achternaam'] . "</td>
         <td> " . $row['Adres'] . ' ' . $row['Postcode'] . "</td>
         <td>". $row['E-mail'] . "</td>
