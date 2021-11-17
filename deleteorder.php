@@ -31,11 +31,12 @@ if ($mysqli -> connect_errno) {
 
 
 $sql = "DELETE FROM bestelformulier WHERE `id` = $_GET[id]";
-if(query($sql)){
-    $success_message = "Account Verwijderd.";
-  }else {
-    $error_message = "Account verwijderen mislukt";
-  }
+
+
+  if ($mysqli->query($sql)){
+    echo $mysqli->affected_rows;
+    header("location: overzicht.php");
+}
 
 
 echo $mysqli->error;
