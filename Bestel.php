@@ -32,4 +32,26 @@ if(!$_POST){
     }
     
     $mysqli->close();
+
+
+    
+    if (isset($_POST['submit'])) {
+      $naam = $_POST['Voornaam'];
+      $onderwerp = $_POST['BierDeBoer'];
+      $mailFrom = $_POST['projectbierdeboer@gmail.com'];
+      $telefoonnr = $_POST['0622617028'];
+      $aantal = $_POST['Aantal'];
+
+      $mailTo = $_POST["E-mail"];
+      $headers = "From: ".$mailFrom;
+      $txt = "je hebt een e-mail gekregen van ".$naam.".\n\n".$telefoonnr;
+  
+      mail($mailTo, $onderwerp, $txt);
+      header("Location: Bestel.html?mailsend");
+    }
+
+
+
+
+    
      ?>
