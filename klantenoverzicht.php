@@ -1,9 +1,4 @@
-<?php include "config.php"; 
-if(!isset($_SESSION['id'])){
-  header('Location: index.php');
-}
-
-?>
+<?php include "config.php"; ?>
 
 
 
@@ -67,46 +62,16 @@ if(!isset($_SESSION['id'])){
             <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Tel']; ?>"onBlur="saveInlineEdit(this,'Tel', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Tel']; ?></td>
             <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Email']; ?>"onBlur="saveInlineEdit(this,'Email', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Email']; ?></td>
             <td><?php echo '<form action="" method="POST"><input type="hidden" name="id" value=' . $data['id'] . '><input type="submit"
-            class="btn-delete" name="submit" value="Verwijderen"></form> <button class="trigger">Weergeven</button> '?>   </td>
+            class="btn-delete" name="submit" value="Delete"></form>' ?> </td>
           </tr>
         </tbody>
-
-    
         <?php
           }
         ?>
       </table>
-
-      <div class="modal">
-              <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <h1>test</h1>
-              </div>
-            </div>
-
-
       <h2><a href="klantentoevoegen.php">Klanten toevoegen</a></h2>
         </div>
     </center>
   <?php mysqli_close($con); ?>
-  <script>
-    const modal = document.querySelector(".modal");
-const trigger = document.querySelector(".trigger");
-const closeButton = document.querySelector(".close-button");
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
-}
-
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener( "click", windowOnClick);
-</script>
 </body>
 </html>

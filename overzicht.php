@@ -21,7 +21,7 @@ if ($mysqli -> connect_errno) {
 
 
 $sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
-
+ 
   if ($result = $mysqli->query($sql)) {
     foreach ($result as $row) {
     echo "
