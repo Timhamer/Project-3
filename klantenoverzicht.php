@@ -1,9 +1,4 @@
-<?php include "config.php"; 
-if(!isset($_SESSION['id'])){
-  header('Location: index.php');
-}
-
-?>
+<?php include "config.php"; ?>
 
 
 
@@ -89,15 +84,6 @@ if(!isset($_SESSION['id'])){
           }
         ?>
       </table>
-
-      <div class="modal">
-              <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <h1>test</h1>
-              </div>
-            </div>
-
-
       <h2><a href="klantentoevoegen.php">Klanten toevoegen</a></h2>
         </div>
     </center>
