@@ -397,3 +397,141 @@ color: grey;
 .zonderaccount a {
   text-decoration: underline;
 }
+
+.nieuweordergegevens{ 
+  text-align: left;
+  padding: 5px 5% 5px 5%;
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
+  height: 25px;
+}
+.nieuweorderborder{
+  border-color: black;
+  border: black;
+  border-style: solid;
+  border-width: 5px;
+  margin:10% 40% 0 40%; 
+  padding: 10px 0 30px 0;
+  border-radius: 20px;
+}
+.nieuweorderinhoud{
+  margin-left: 5%;
+  font-family: Montserrat;
+  padding-top: 20xpx;
+}
+.nieuweorderbutton{
+  background-color: black;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 70%;
+  cursor: pointer;
+  margin: 5px 0 10px 0; ;
+  height: 30px;
+  color: white;
+  height: 40px;
+  
+}
+.nieuweorderbutton:hover{
+  color: black;
+  background-color: white;
+}
+  
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgrey;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}

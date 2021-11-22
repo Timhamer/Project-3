@@ -10,7 +10,7 @@ if($_SESSION['rol'] == 1){
     echo 'Klant';
 }
 
-if(!isset($_SESSION['uname'])){
+if(!isset($_SESSION['id'])){
     header('Location: index.php');
 }
 

@@ -6,6 +6,10 @@ if(isset($_POST['but_submit'])){
     $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
     $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
 
+    $id = "SELECT id AS idcount FROM users WHERE naam='".$uname."' and wachtwoord='".$password."'";
+    $resultid = mysqli_query($con,$id);
+    $rowid = mysqli_fetch_array($resultid);
+    $countid = $rowid['idcount'];
 
     $rol = "select rol as rolcount from users where naam='".$uname."' and wachtwoord ='".$password."'";
     $resultrol = mysqli_query($con,$rol);
@@ -20,7 +24,7 @@ if(isset($_POST['but_submit'])){
         $count = $row['Count'];
         if ($count > 0){
             //succes
-            $_SESSION['uname'] = $uname;
+            $_SESSION['id'] = $countid;
             $_SESSION['rol'] = $countrol;
             header("Location:home.php");
              exit();   

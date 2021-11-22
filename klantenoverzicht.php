@@ -62,9 +62,24 @@
             <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Tel']; ?>"onBlur="saveInlineEdit(this,'Tel', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Tel']; ?></td>
             <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Email']; ?>"onBlur="saveInlineEdit(this,'Email', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Email']; ?></td>
             <td><?php echo '<form action="" method="POST"><input type="hidden" name="id" value=' . $data['id'] . '><input type="submit"
-            class="btn-delete" name="submit" value="Delete"></form>' ?> </td>
+            class="btn-delete" name="submit" value="Verwijderen"></form> <a class="btnmodal" href="#'.$data['id'].'">Weergeven</a> '?> </td>
           </tr>
         </tbody>
+
+        <?php 
+        echo '<div id="'.$data['id'].'" class="overlay">
+                <div class="popup">
+                  <h2>Test</h2>
+                  <a class="closemodal" href="#">&times;</a>
+                  <div class="content">
+                  '.$data['id'].'
+                  </div>
+                </div>
+              </div>
+
+                      
+        '?>
+              
         <?php
           }
         ?>
@@ -73,5 +88,24 @@
         </div>
     </center>
   <?php mysqli_close($con); ?>
+  <!-- <script>
+    const modal = document.querySelector(".modal");
+    const trigger = document.querySelector(".trigger");
+    const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener( "click", windowOnClick);
+</script> -->
 </body>
 </html>
