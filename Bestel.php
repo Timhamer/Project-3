@@ -42,11 +42,13 @@ if(!$_POST){
       $telefoonnr = $_POST['0622617028'];
       $aantal = $_POST['Aantal'];
 
+
       $mailTo = $_POST["E-mail"];
       $headers = "From: ".$mailFrom;
-      $txt = "je hebt een e-mail gekregen van ".$naam.".\n\n".$telefoonnr;
+      $txt = "je hebt een e-mail gekregen van BierDeBoer.com".\n\n".$telefoonnr";
+      $txtaantal = "je hebt ".$aantal." biertjes bestelt."
   
-      mail($mailTo, $onderwerp, $txt);
+      mail($mailTo, $onderwerp, $txt, $txtaantal);
       header("Location: Bestel.html?mailsend");
     }
 
