@@ -69,10 +69,17 @@
         <?php 
         echo '<div id="'.$data['id'].'" class="overlay">
                 <div class="popup">
-                  <h2>Test</h2>
+                  <h2>'.$data['Naam'].'</h2>
                   <a class="closemodal" href="#">&times;</a>
                   <div class="content">
-                  '.$data['id'].'
+                  <h2> 
+                      ID: '.$data['id'].'<br>
+                      Factuuradres: '.$data['Factuuradres'].' <br>
+                      Adres: '.$data['Adres'].' <br>
+                      Postcode: '.$data['Postcode'].'<br>
+                      Telefoonnummer: '.$data['Tel'].' <br>
+                      E-mail: '.$data['Email'].'<br>
+                  </h2>
                   </div>
                 </div>
               </div>
@@ -84,28 +91,9 @@
           }
         ?>
       </table>
-      <h2><a href="klantentoevoegen.php">Klanten toevoegen</a></h2>
+      <h2><a class="toevoegen" href="klantentoevoegen.php">Klanten toevoegen</a></h2>
         </div>
     </center>
   <?php mysqli_close($con); ?>
-  <!-- <script>
-    const modal = document.querySelector(".modal");
-    const trigger = document.querySelector(".trigger");
-    const closeButton = document.querySelector(".close-button");
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
-}
-
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener( "click", windowOnClick);
-</script> -->
 </body>
 </html>

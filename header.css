@@ -513,10 +513,11 @@ color: grey;
 .popup h2 {
   margin-top: 0;
   color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: 'Montserrat';
+
 }
 
-.popup .close {
+.popup .closemodal {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -527,11 +528,77 @@ color: grey;
   color: #333;
 }
 
-.popup .close:hover {
-  color: #06D85F;
+.popup .closemodal:hover {
+  color: red;
 }
 
 .popup .content {
   max-height: 30%;
   overflow: auto;
+  text-align: left;
+}
+
+.btnmodal {
+  appearance: auto;
+  user-select: none;
+  font-weight: bold;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #06D85F;
+  color: #101010;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+  border: 2px solid black;
+}
+
+.btn-delete {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  appearance: auto;
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: red;
+  color: #101010;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+  margin-bottom: 5%;
+  border: 2px solid black;
+}
+
+.btnmodal:hover {
+  background-color: #028A0F;
+}
+
+.btn-delete:hover {
+  background-color: #B90E0A;
+}
+
+.klantenh2 {
+  margin-top: 3%;
+  text-decoration: underline;
+}
+
+.toevoegen {
+  color: #101010;
+  cursor: pointer;
+}
+
+.toevoegen:hover {
+  text-decoration: underline;
+}
+
+.terug:hover {
+  color: #101010;
+  text-decoration: underline;
 }
