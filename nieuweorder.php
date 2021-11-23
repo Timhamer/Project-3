@@ -1,6 +1,10 @@
 <?php
+
+if(!isset($_SESSION['id'])){
+  header('Location: index.php');
+}
 if(!$_POST){
-  (header("location: bestel.html"));
+  (header("location: nieuweorder.html"));
 }
     $mysqli = new mysqli("localhost","root","","biermanagement");
     
