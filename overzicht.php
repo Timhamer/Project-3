@@ -11,10 +11,14 @@
             <th>Delete</th>
           </tr>
         </thead>
+
+
+
+<?php
+
+include "header.html";?>
 <a name=afgerond>afgerond</a><br>
 <a name=onafgerond>onafgrond</a>
-
-
 <?php
 $mysqli = new mysqli("localhost","root","","biermanagement");
 
@@ -70,11 +74,6 @@ if ($mysqli -> connect_errno) {
   exit();
 }
 
-  if(isset([''])){
-    $order = $_GET['order'];
-  }else{
-    $order = 'asset_num';
-  }
 
   
 

@@ -53,7 +53,7 @@ body {
   height: 100%;
   display: table;
   float: left;
-  padding: 20px 30px;
+  padding: 0px 20px;
 
 }
 
@@ -606,4 +606,8 @@ color: grey;
 .terug:hover {
   color: #101010;
   text-decoration: underline;
+}
+
+.fa-bars:before{
+  color:white;
 }
