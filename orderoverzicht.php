@@ -1,5 +1,6 @@
 <?php
 include "config.php";
+include "header.html";
 $_ACCOUNTID = $_SESSION['id'];
 ?>
 <table class="content-table">
@@ -15,6 +16,13 @@ $_ACCOUNTID = $_SESSION['id'];
           </tr>
         </thead>
 <?php
+
+$mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
+
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
+}
 
 $sql = "SELECT * FROM users WHERE id = $_ACCOUNTID";
  
