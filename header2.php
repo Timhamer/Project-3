@@ -18,9 +18,8 @@
     </div>
       <div class="navbar">
         <ul>
-          <a href="nieuweorder.php"><li>Bestellen</li></a>
-          <a href="orderoverzicht.php"><li>Overzicht</li></a>
-          <a href="gegevens.php"><li>Gegevens</li></a>
+          <a href="klantenoverzicht.php"><li>Klanten overzicht</li></a>
+          <a href="overzicht.php"><li>Order overzicht</li></a>
           <a><li> <form class="logoutbtn" method='post' action="">
             <input type="submit" value="Log uit" name="but_logout">
         </form></li></a>

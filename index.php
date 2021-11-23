@@ -56,7 +56,7 @@ if(isset($_POST['but_submit'])){
                     </div>
                     <div>
                         <input type="submit" value="Submit" name="but_submit" id="but_submit" />
-                        <h2 class="zonderaccount">Of klik <a href="Bestel.html">hier</a> om verder te gaan zonder account.</h2>
+                        <h2 class="zonderaccount">Of klik <a href="Bestellen.php">hier</a> om verder te gaan zonder account.</h2>
                     </div>
                    
                 </div>

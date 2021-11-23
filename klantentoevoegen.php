@@ -12,11 +12,13 @@ include "config.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KlantenOverzicht</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
     <?php
+    include "header2.php";
+
     $error_message = "";$success_message = "";
 
     if(isset($_POST['btnsignup'])){
@@ -48,7 +50,7 @@ include "config.php";
             $result = $stmt->get_result();
             $stmt->close();
             if($result->num_rows > 0){
-                $isValid - false;
+                $isValid = false;
                 $error_message = "Email bestaat al";
             }
         }
@@ -82,7 +84,7 @@ include "config.php";
        <?php 
         if(!empty($success_message)){
         ?>
-        <div class="alert alert-danger">
+        <div class="alert alert-good">
             <strong>Success!</strong> <?= $success_message ?>
         </div>
        <?php

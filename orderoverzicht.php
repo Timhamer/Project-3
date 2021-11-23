@@ -1,6 +1,6 @@
 <?php
 include "config.php";
-include "header.html";
+include "header.php";
 $_ACCOUNTID = $_SESSION['id'];
 ?>
 <table class="content-table">

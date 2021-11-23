@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <head>
-  <title>Sorting Tables w/ JavaScript</title>
+  <title>Klanten overzicht</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
    <link rel="stylesheet" href="header.css">
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <?php include "header.html"; 
+  <?php include "header2.php"; 
     if(isset($_REQUEST['submit'])){
       $sql = "DELETE FROM users WHERE id = {$_REQUEST['id']}";
       if(mysqli_query($con, $sql)){
