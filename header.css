@@ -183,9 +183,14 @@ color: grey;
   width: 50%;
   text-align: left;
   padding: 0 5% 0 5%;
-  margin: 0 20% 0 20%;
+  margin: 0 10% 0 -80%;
   border-radius: 5px;
   height: 25px;
+}
+
+.bestelaantaltekst{
+  margin: 5% 10% 0 -190%;  
+
 }
 
   .bestelbtn {
