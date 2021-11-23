@@ -33,15 +33,17 @@ if(!$_POST){
           $mailFrom = $_POST['projectbierdeboer@gmail.com'];
           $telefoonnr = $_POST['0622617028'];
           $aantal = $_POST['Aantal'];
-    
+         //klant
           $To = 'tfhammersma@gmail.com';
           $mailTo = $_POST["E-mail"];
           $headers = "From: ".$mailFrom;
-          $txtaantal = "je hebt ".$aantal." biertjes bestelt.";
           $txt = "je hebt een mail gekregen van de bierman";
-          
+          $txtaantal = "je hebt ".$aantal." biertjes bestelt.";
+         
+          //bierman
+          $tekst = $naam." heeft ".$aantal." biertjes bestelt";
       
-          mail($To, $onderwerp, $txt, $txtaantal);
+          mail($To, $onderwerp, $tekst,);
          
 
           mail($mailTo, $onderwerp, $txt, $txtaantal);

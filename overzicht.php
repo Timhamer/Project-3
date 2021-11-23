@@ -54,6 +54,8 @@ $sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
 
 
 $mysqli -> close();
+
+  if(isset($_GET))
 ?>
 <!DOCTYPE html>
 <head>
