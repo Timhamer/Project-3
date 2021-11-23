@@ -607,3 +607,21 @@ color: grey;
   color: #101010;
   text-decoration: underline;
 }
+
+.gegevensnaam {
+  margin-top: 10%;
+  font-family: 'Montserrat';
+  text-decoration: underline;
+  margin-bottom: 2%;
+}
+
+.titelgegevens {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.gegevens h2 {
+  margin-left: 3%;
+  font-family: 'Montserrat';
+  
+}
