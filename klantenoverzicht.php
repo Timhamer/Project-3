@@ -62,14 +62,36 @@
             <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Tel']; ?>"onBlur="saveInlineEdit(this,'Tel', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Tel']; ?></td>
             <td contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="<?php echo $data['Email']; ?>"onBlur="saveInlineEdit(this,'Email', '<?php echo $data['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $data['Email']; ?></td>
             <td><?php echo '<form action="" method="POST"><input type="hidden" name="id" value=' . $data['id'] . '><input type="submit"
-            class="btn-delete" name="submit" value="Delete"></form>' ?> </td>
+            class="btn-delete" name="submit" value="Verwijderen"></form> <a class="btnmodal" href="#'.$data['id'].'">Weergeven</a> '?> </td>
           </tr>
         </tbody>
+
+        <?php 
+        echo '<div id="'.$data['id'].'" class="overlay">
+                <div class="popup">
+                  <h2>'.$data['Naam'].'</h2>
+                  <a class="closemodal" href="#">&times;</a>
+                  <div class="content">
+                  <h2> 
+                      ID: '.$data['id'].'<br>
+                      Factuuradres: '.$data['Factuuradres'].' <br>
+                      Adres: '.$data['Adres'].' <br>
+                      Postcode: '.$data['Postcode'].'<br>
+                      Telefoonnummer: '.$data['Tel'].' <br>
+                      E-mail: '.$data['Email'].'<br>
+                  </h2>
+                  </div>
+                </div>
+              </div>
+
+                      
+        '?>
+              
         <?php
           }
         ?>
       </table>
-      <h2><a href="klantentoevoegen.php">Klanten toevoegen</a></h2>
+      <h2><a class="toevoegen" href="klantentoevoegen.php">Klanten toevoegen</a></h2>
         </div>
     </center>
   <?php mysqli_close($con); ?>

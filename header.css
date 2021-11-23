@@ -481,3 +481,124 @@ color: grey;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: 'Montserrat';
+
+}
+
+.popup .closemodal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .closemodal:hover {
+  color: red;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  text-align: left;
+}
+
+.btnmodal {
+  appearance: auto;
+  user-select: none;
+  font-weight: bold;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #06D85F;
+  color: #101010;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+  border: 2px solid black;
+}
+
+.btn-delete {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  appearance: auto;
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: red;
+  color: #101010;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+  margin-bottom: 5%;
+  border: 2px solid black;
+}
+
+.btnmodal:hover {
+  background-color: #028A0F;
+}
+
+.btn-delete:hover {
+  background-color: #B90E0A;
+}
+
+.klantenh2 {
+  margin-top: 3%;
+  text-decoration: underline;
+}
+
+.toevoegen {
+  color: #101010;
+  cursor: pointer;
+}
+
+.toevoegen:hover {
+  text-decoration: underline;
+}
+
+.terug:hover {
+  color: #101010;
+  text-decoration: underline;
+}

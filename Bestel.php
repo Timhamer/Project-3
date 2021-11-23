@@ -27,6 +27,26 @@ if(!$_POST){
               <br>
             </div>
           </center>";
+
+          $naam = $_POST['Voornaam'];
+          $onderwerp = "BierDeBoer";
+          $mailFrom = $_POST['projectbierdeboer@gmail.com'];
+          $telefoonnr = $_POST['0622617028'];
+          $aantal = $_POST['Aantal'];
+    
+          $To = 'tfhammersma@gmail.com';
+          $mailTo = $_POST["E-mail"];
+          $headers = "From: ".$mailFrom;
+          $txtaantal = "je hebt ".$aantal." biertjes bestelt.";
+          $txt = "je hebt een mail gekregen van de bierman";
+          
+      
+          mail($To, $onderwerp, $txt, $txtaantal);
+         
+
+          mail($mailTo, $onderwerp, $txt, $txtaantal);
+         header("Location: Bestel.html?mailsend");
+
     } else {
         die("Error: {$mysqli->errno} : {$mysqli->error}");
     }
@@ -35,22 +55,7 @@ if(!$_POST){
 
 
     
-    if (isset($_POST['submit'])) {
-      $naam = $_POST['Voornaam'];
-      $onderwerp = $_POST['BierDeBoer'];
-      $mailFrom = $_POST['projectbierdeboer@gmail.com'];
-      $telefoonnr = $_POST['0622617028'];
-      $aantal = $_POST['Aantal'];
-
-      $mailTo = $_POST["E-mail"];
-      $headers = "From: ".$mailFrom;
-      $txt = "je hebt een e-mail gekregen van ".$naam.".\n\n".$telefoonnr;
-  
-      mail($mailTo, $onderwerp, $txt);
-      header("Location: Bestel.html?mailsend");
-    }
-
-
+    
 
 
     
