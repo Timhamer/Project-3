@@ -15,13 +15,6 @@ $_ACCOUNTID = $_SESSION['id'];
           </tr>
         </thead>
 <?php
-$mysqli = new mysqli("localhost","root","","biermanagement");
-
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}
-
 
 $sql = "SELECT * FROM users WHERE id = $_ACCOUNTID";
  
