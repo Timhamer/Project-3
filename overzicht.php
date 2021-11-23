@@ -17,10 +17,17 @@
 <?php
 
 include "header.html";?>
-<a name=afgerond>afgerond</a><br>
-<a name=onafgerond>onafgrond</a>
+
+
+<button type="submit" name="onafgerond" class="button"> Onafgerond </button>
+ 
+ 
+<button type="submit" name="afgerond" class="button"> Afgerond </button>
 <?php
 $mysqli = new mysqli("localhost","root","","biermanagement");
+
+$afgerond = $_POST = ['afgerond'];
+$onafgerond = $_POST = ['onafgerond'];
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -28,8 +35,16 @@ if ($mysqli -> connect_errno) {
 }
 
 
-$sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
+//$sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
+$sql = "SELECT * FROM `bestelformulier`";
  
+if($_POST['afgerond'] == true) {
+  $sql = $sql . "ORDER BY Status DESC";
+}
+ 
+if($_POST['onafgerond'] == true) {
+  $sql= $sql . " ORDER BY Status ASC";
+}
   if ($result = $mysqli->query($sql)) {
     foreach ($result as $row) {
     echo "
