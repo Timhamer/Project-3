@@ -1,10 +1,26 @@
-<?php
+<?php include "header.html" ?>
 
-$test = mysqli_query($con, "select * from users");
-while($test2 = mysqli_fetch_array($test)){
-
-    $test3 = $test2['Postcode'];
-
-    echo $test3;
-}
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="nieuweorder.php" method="post">
+    <div class="nieuweorderborder">
+        <div class="nieuweorderinhoud">
+            <h2>Aantal biertjes</h2><input class="nieuweordergegevens" type="text"  placeholder="Aantal"  name="Aantalklant" required>
+            <h2>Adres</h2><input class="nieuweordergegevens" type="text"  placeholder="Adres"  name="Adresklant" required><br>
+            <button name="submit" type="submit" class="nieuweorderbutton">Bestelling toevoegen</button>
+            <p>Als u geen adres invult komt</p>
+            <p>het adres van uw account</p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -44,6 +44,7 @@
           </tr>
         </thead>
 
+        <h2><a class="toevoegen" href="klantentoevoegen.php">Klanten toevoegen</a></h2>
           <?php
             $records = mysqli_query($con, "select * from users");
 
@@ -72,13 +73,12 @@
                   <h2>'.$data['Naam'].'</h2>
                   <a class="closemodal" href="#">&times;</a>
                   <div class="content">
-                  <h2> 
-                      ID: '.$data['id'].'<br>
-                      Factuuradres: '.$data['Factuuradres'].' <br>
-                      Adres: '.$data['Adres'].' <br>
-                      Postcode: '.$data['Postcode'].'<br>
-                      Telefoonnummer: '.$data['Tel'].' <br>
-                      E-mail: '.$data['Email'].'<br>
+                  <h2> ID: '.$data['id'].'<br> </h2>
+                  <h2> Factuuradres: '.$data['Factuuradres'].' <br> </h2>
+                  <h2> Adres: '.$data['Adres'].' <br> </h2> 
+                  <h2> Postcode: '.$data['Postcode'].'<br> </h2> 
+                  <h2> Telefoonnummer: '.$data['Tel'].' <br> </h2>
+                  <h2> E-mail: '.$data['Email'].'<br> </h2>
                   </h2>
                   </div>
                 </div>
@@ -91,7 +91,6 @@
           }
         ?>
       </table>
-      <h2><a class="toevoegen" href="klantentoevoegen.php">Klanten toevoegen</a></h2>
         </div>
     </center>
   <?php mysqli_close($con); ?>

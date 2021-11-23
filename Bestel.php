@@ -2,7 +2,7 @@
 
 <?php
 if(!$_POST){
-  (header("location: bestel.html"));
+  (header("location: Bestel.html"));
 }
     $mysqli = new mysqli("localhost","root","","biermanagement");
     

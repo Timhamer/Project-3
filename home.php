@@ -7,7 +7,7 @@ if($_SESSION['rol'] == 1){
     header("location:klantenoverzicht.php");
     exit();
 }else {
-    echo 'Klant';
+    header("location:nieuweorder.php");
 }
 
 if(!isset($_SESSION['id'])){
@@ -17,7 +17,8 @@ if(!isset($_SESSION['id'])){
 if(isset($_POST['but_logout'])){
     session_destroy();
     header('Location: index.php');
-}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +30,6 @@ if(isset($_POST['but_logout'])){
 </head>
     <body>
         <h1>homepage</h1>
-        <form method='post' action="">
-            <input type="submit" value="Logout" name="but_logout">
-        </form>
+       
 </body>
 </html>
