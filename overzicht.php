@@ -11,6 +11,10 @@
             <th>Delete</th>
           </tr>
         </thead>
+<a name=afgerond>afgerond</a><br>
+<a name=onafgerond>onafgrond</a>
+
+
 <?php
 $mysqli = new mysqli("localhost","root","","biermanagement");
 
@@ -52,10 +56,33 @@ $sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
   $result -> free_result();
 }
 
+if($row['Status'] == 0){
+  
+}
+
 
 $mysqli -> close();
 
-  if(isset($_GET))
+$mysqli = new mysqli("localhost","root","","biermanagement");
+
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
+}
+
+  if(isset([''])){
+    $order = $_GET['order'];
+  }else{
+    $order = 'asset_num';
+  }
+
+  
+
+  
+
+
+    
+  
 ?>
 <!DOCTYPE html>
 <head>
@@ -64,7 +91,6 @@ $mysqli -> close();
   <meta charset="utf-8" />
    <link rel="stylesheet" href="header.css">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="overzicht.js">'
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
