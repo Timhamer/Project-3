@@ -7,7 +7,7 @@ if($_SESSION['rol'] == 1){
     header("location:klantenoverzicht.php");
     exit();
 }else {
-    echo 'Klant';
+    header("location:Bestel.php");
 }
 
 if(!isset($_SESSION['id'])){
