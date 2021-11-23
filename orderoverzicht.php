@@ -24,7 +24,7 @@ $sql = "SELECT * FROM users WHERE id = $_ACCOUNTID";
     <tr>
         <td>" . $row['id'] . "</td> 
         <td>" . $row['Naam']  . "</td>
-        <td> " . $row['Adres'] . $row['Postcode'] . "</td>
+        <td> " . $row['Adres'] .' <br>' . $row['Postcode'] . "</td>
         <td> " . $row['Factuuradres'] . "</td>
         <td>". $row['Email'] .  "</td>
         <td> " . $row['Tel'] . "</td>";
@@ -32,8 +32,9 @@ $sql = "SELECT * FROM users WHERE id = $_ACCOUNTID";
          echo "";
       
  
-      
-  }
+    
+ 
+    }
   $result -> free_result();
 }
 
