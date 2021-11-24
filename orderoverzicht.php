@@ -13,7 +13,7 @@ echo
             <th>Telefoonnummer</th>
             
           </tr>
-        </thead>'
+        </thead>';
 
 
 $mysqli = new mysqli("localhost","root","","biermanagement");
