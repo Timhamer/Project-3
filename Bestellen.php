@@ -32,7 +32,7 @@
                 <div class="">Totaal = </div>
             </div>
             <div class="bestelaantalrow">
-                <div class="bestelaantalinvul"><input class="bestelaantal" type="text"  placeholder="Aantal"  name="Aantal" required></div>
+                <div class="bestelaantalinvul"><input class="bestelaantal" type="number"  placeholder="Aantal"  name="Aantal" required></div>
             </div>  
             </div> 
     <div class="bestelborder">
@@ -44,7 +44,7 @@
             </div>
             <div class="bestelrow">
                 <div class="bestelcolumninvul"><input class="bestelgegevens" type="text"  placeholder="Voornaam"  name="Voornaam" required></div>
-                <div class="bestelcolumninvul"><input class="bestelgegevens" type="text"  placeholder="E-mail"  name="E-mail" required></div>
+                <div class="bestelcolumninvul"><input class="bestelgegevens" type="email"  placeholder="E-mail"  name="E-mail" required></div>
             </div>
             <div class="bestelrow">
                 <div class="bestelcolumntekst"><h2>Tussenvoegsel</h2></div>
@@ -68,7 +68,7 @@
             </div>
             <div class="bestelrow">
                 <div class="bestelcolumntekst"><h2>Bestellen</h2></div>
-                <div class="bestelcolumninvul"><input class="bestelgegevens" type="text" placeholder="Telefoonnummer"  name="Telefoonnummer" required></div>
+                <div class="bestelcolumninvul"><input class="bestelgegevens" type="tel" placeholder="Telefoonnummer"  name="Telefoonnummer" required></div>
                 <button name="submit" type="submit" class="bestelbtn">Bestellen</button>
             </div>
         </div>
