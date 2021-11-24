@@ -28,7 +28,6 @@ $sql = "SELECT * FROM `bestelformulier`";
 if($_POST['afgerond'] == true) {
   $sql = $sql . "ORDER BY Status DESC";
 }
-
  
 if($_POST['onafgerond'] == true) {
   $sql= $sql . " ORDER BY Status ASC";
@@ -48,9 +47,6 @@ echo "
     <th>Delete</th>
   </tr>
 </thead>";
-
-
- 
 
 
   if ($result = $mysqli->query($sql)) {
@@ -91,7 +87,7 @@ if($row['Status'] == 0){
 
 $mysqli -> close();
 
-$mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
+$mysqli = new mysqli("localhost","root","","biermanagement");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
