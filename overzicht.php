@@ -1,17 +1,22 @@
 
 <?php
+<<<<<<< Updated upstream
 include "header2.php";?>
+=======
+error_reporting(0);
+include "header.html";?>
+>>>>>>> Stashed changes
 
-
-<button type="submit" name="onafgerond" class="button"> Onafgerond </button>
- 
- 
-<button type="submit" name="afgerond" class="button"> Afgerond </button>
+<form method="POST" action= "">
+<button type="submit" name="onafgerond" class="button" value="false"> Onafgerond </button>
+</form>
+<form method="POST" action= "">
+<button type="submit" name="afgerond" class="button" value="true"> Afgerond </button>
+</form>
 <?php
 $mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
 
-$afgerond = $_POST = ['afgerond'];
-$onafgerond = $_POST = ['onafgerond'];
+
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -20,11 +25,15 @@ if ($mysqli -> connect_errno) {
 
 
 //$sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
+
+
 $sql = "SELECT * FROM `bestelformulier`";
- 
-if($_POST['afgerond'] == true) {
+
+if($_POST['afgerond'] === true) {
   $sql = $sql . "ORDER BY Status DESC";
+}else{$sql= $sql . " ORDER BY Status ASC";
 }
+<<<<<<< Updated upstream
  
 if($_POST['onafgerond'] == true) {
   $sql= $sql . " ORDER BY Status ASC";
@@ -44,6 +53,12 @@ echo "
     <th>Delete</th>
   </tr>
 </thead>";
+=======
+
+
+ echo $sql;
+
+>>>>>>> Stashed changes
 
   if ($result = $mysqli->query($sql)) {
     foreach ($result as $row) {
