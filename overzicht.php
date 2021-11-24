@@ -1,26 +1,17 @@
-<table class="content-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Aantal</th>
-            <th>Naam</th>
-            <th>Adres</th>
-            <th>E-mail</th>
-            <th>Telefoonnummer</th>
-            <th>Status</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-
-
 
 <?php
+include "header2.php";?>
 
-include "header.html";?>
-<a name=afgerond>afgerond</a><br>
-<a name=onafgerond>onafgrond</a>
+
+<button type="submit" name="onafgerond" class="button"> Onafgerond </button>
+ 
+ 
+<button type="submit" name="afgerond" class="button"> Afgerond </button>
 <?php
-$mysqli = new mysqli("localhost","root","","biermanagement");
+$mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
+
+$afgerond = $_POST = ['afgerond'];
+$onafgerond = $_POST = ['onafgerond'];
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -28,11 +19,36 @@ if ($mysqli -> connect_errno) {
 }
 
 
-$sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
+//$sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
+$sql = "SELECT * FROM `bestelformulier`";
  
+if($_POST['afgerond'] == true) {
+  $sql = $sql . "ORDER BY Status DESC";
+}
+ 
+if($_POST['onafgerond'] == true) {
+  $sql= $sql . " ORDER BY Status ASC";
+}
+
+echo "
+<table class='content-table'>
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>Aantal</th>
+    <th>Naam</th>
+    <th>Adres</th>
+    <th>E-mail</th>
+    <th>Telefoonnummer</th>
+    <th>Status</th>
+    <th>Delete</th>
+  </tr>
+</thead>";
+
   if ($result = $mysqli->query($sql)) {
     foreach ($result as $row) {
     echo "
+
     <tr>
         <td>" . $row['id'] . "</td> 
         <td>" . $row['Aantal'] . "</td> 
@@ -67,7 +83,7 @@ if($row['Status'] == 0){
 
 $mysqli -> close();
 
-$mysqli = new mysqli("localhost","root","","biermanagement");
+$mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -94,6 +110,6 @@ if ($mysqli -> connect_errno) {
 </head>
 
 <body> 
-  
+
 </body>
 </html>

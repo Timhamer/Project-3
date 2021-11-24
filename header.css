@@ -634,3 +634,30 @@ color: grey;
 .data {
   margin-bottom: 3%;
 }
+
+.logoutbtn input {
+  background-color: #101010;
+  font-family: 'Montserrat';
+  border: none;
+  font-size: 16px;
+  color: white;
+} 
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-good {
+  color: #086623;
+  background-color: #98FB98;
+  border-color: #99FB99;
+}

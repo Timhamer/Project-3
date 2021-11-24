@@ -2,9 +2,9 @@
 
 <?php
 if(!$_POST){
-  (header("location: bestel.html"));
+  (header("location: Bestel.html"));
 }
-    $mysqli = new mysqli("localhost","root","","biermanagement");
+    $mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
     
     if ( $mysqli->connect_error ) {
         die( 'Connect Error: ' . $mysqli->connect_errno . ': ' . $mysqli->connect_error );
@@ -62,3 +62,4 @@ if(!$_POST){
 
     
      ?>
+
