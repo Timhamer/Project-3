@@ -10,7 +10,7 @@ include "header.html";?>
 <button type="submit" name="afgerond" class="button" value="true"> Afgerond </button>
 </form>
 <?php
-$mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
+$mysqli = new mysqli("localhost","root","","biermanagement");
 
 
 

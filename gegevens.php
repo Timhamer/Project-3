@@ -25,16 +25,16 @@ $row = mysqli_fetch_array($sql)
         <h2 class="gegevensnaam">Naam:</h2>
         <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Naam'];?> "onBlur="saveInlineEdit(this,'Naam', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Naam']; ?></h2>
         <h2 class="gegevensnaam">Wachtwoord:</h2>
-        <h2 class="data"contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Wachtwoord'];?> "onBlur="saveInlineEdit(this,'Naam', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Wachtwoord']; ?></h2>
+        <h2 class="data"contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Wachtwoord'];?> "onBlur="saveInlineEdit(this,'Wachtwoord', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Wachtwoord']; ?></h2>
         <h2 class="gegevensnaam">Factuuradres:</h2>
-        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Factuuradres'];?> "onBlur="saveInlineEdit(this,'Naam', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Factuuradres']; ?></h2>
+        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Factuuradres'];?> "onBlur="saveInlineEdit(this,'Factuuradres', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Factuuradres']; ?></h2>
         <h2 class="gegevensnaam">Adres:</h2>
-        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Adres'];?> "onBlur="saveInlineEdit(this,'Naam', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Adres']; ?></h2>
+        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Adres'];?> "onBlur="saveInlineEdit(this,'Adres', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Adres']; ?></h2>
         <h2 class="gegevensnaam">Postcode:</h2>
-        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Postcode'];?> "onBlur="saveInlineEdit(this,'Naam', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Postcode']; ?></h2>
+        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Postcode'];?> "onBlur="saveInlineEdit(this,'Postcode', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Postcode']; ?></h2>
         <h2 class="gegevensnaam">Telefoonnummer:</h2>
-        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Tel'];?> "onBlur="saveInlineEdit(this,'Naam', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Tel']; ?></h2>
+        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Tel'];?> "onBlur="saveInlineEdit(this,'Tel', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Tel']; ?></h2>
         <h2 class="gegevensnaam">E-mail:</h2>
-        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Email'];?> "onBlur="saveInlineEdit(this,'Naam', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Email']; ?></h2>
+        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Email'];?> "onBlur="saveInlineEdit(this,'Email', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Email']; ?></h2>
     </div>
 </body>
