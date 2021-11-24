@@ -1,11 +1,7 @@
 
 <?php
-<<<<<<< Updated upstream
-include "header2.php";?>
-=======
 error_reporting(0);
 include "header.html";?>
->>>>>>> Stashed changes
 
 <form method="POST" action= "">
 <button type="submit" name="onafgerond" class="button" value="false"> Onafgerond </button>
@@ -33,7 +29,6 @@ if($_POST['afgerond'] === true) {
   $sql = $sql . "ORDER BY Status DESC";
 }else{$sql= $sql . " ORDER BY Status ASC";
 }
-<<<<<<< Updated upstream
  
 if($_POST['onafgerond'] == true) {
   $sql= $sql . " ORDER BY Status ASC";
@@ -53,12 +48,6 @@ echo "
     <th>Delete</th>
   </tr>
 </thead>";
-=======
-
-
- echo $sql;
-
->>>>>>> Stashed changes
 
   if ($result = $mysqli->query($sql)) {
     foreach ($result as $row) {
@@ -98,7 +87,7 @@ if($row['Status'] == 0){
 
 $mysqli -> close();
 
-$mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
+$mysqli = new mysqli("localhost","root","","biermanagement");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;

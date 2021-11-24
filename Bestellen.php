@@ -1,4 +1,9 @@
-<?php include "header.php"?>
+<?php include "header.php"
+
+$p = "1.50"
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +37,7 @@
                 <div class="">Totaal = </div>
             </div>
             <div class="bestelaantalrow">
-                <div class="bestelaantalinvul"><input class="bestelaantal" type="number"  placeholder="Aantal"  name="Aantal" required></div>
+                <div class="bestelaantalinvul"><input min="1" max="24" class="bestelaantal" type="number"  placeholder="Aantal"  name="Aantal" required></div>
             </div>  
             </div> 
     <div class="bestelborder">
