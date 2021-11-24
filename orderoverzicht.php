@@ -5,10 +5,9 @@ $_ACCOUNTID = $_SESSION['id'];
 <table class="content-table">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Aantal</th>
             <th>Naam</th>
             <th>Adres</th>
-            <th>Factuuradres</th>
             <th>E-mail</th>
             <th>Telefoonnummer</th>
             
@@ -23,18 +22,17 @@ if ($mysqli -> connect_errno) {
 }
 
 
-$sql = "SELECT * FROM users WHERE id = $_ACCOUNTID";
+$sql = "SELECT * FROM bestelformulier WHERE userid = $_ACCOUNTID";
  
   if ($result = $mysqli->query($sql)) {
     foreach ($result as $row) {
     echo "
     <tr>
-        <td>" . $row['id'] . "</td> 
-        <td>" . $row['Naam']  . "</td>
+        <td>" . $row['Aantal'] . "</td> 
+        <td>" . $row['Voornaam']  . ' ' . $row['Tussenvoegsel'] .  ' ' . $row['Achternaam'] . "</td>
         <td> " . $row['Adres'] .' <br>' . $row['Postcode'] . "</td>
-        <td> " . $row['Factuuradres'] . "</td>
-        <td>". $row['Email'] .  "</td>
-        <td> " . $row['Tel'] . "</td>";
+        <td>". $row['E-mail'] .  "</td>
+        <td> " . $row['Telefoonnummer'] . "</td>";
  
          echo "";
       
