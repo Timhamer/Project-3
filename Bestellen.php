@@ -1,9 +1,4 @@
-<?php include "header.php"
-
-$p = "1.50"
-
-
-?>
+<?php include "header.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +13,41 @@ $p = "1.50"
 
 
 <body>    
+
+
+<script>
+            function mult(value){
+                var x, y, z ;
+
+                var x = 0.53 * value ;
+                x = x.toFixed(2);
+
+                var y = 1.75 * value ;
+                y = y.toFixed(2);
+
+
+                if(y>38) {
+                    var z = 15;
+                    z = z.toFixed(2);
+                 } else if (y>38){
+                    var z = 15;
+                    z = z.toFixed(2);
+
+                 }  else {
+                    var z = 7.50;
+
+                    z = z.toFixed(2);
+
+                 }
+
+
+                document.getElementById('out2x').value = x;
+                document.getElementById('out3x').value = y;
+                document.getElementById('out4x').value = z;
+
+
+            }
+</script>
     
     <form action="Bestel.php" method="post">
         
@@ -34,10 +64,10 @@ $p = "1.50"
             <div class="bestelaantalrow">
                 <div class="bestelaantaltekst"><h2>Aantal</h2></div>
 
-                <div class="">Totaal = </div>
+                <div class="">Totaal = <?php echo $t ?></div>
             </div>
             <div class="bestelaantalrow">
-                <div class="bestelaantalinvul"><input min="1" max="24" class="bestelaantal" type="number"  placeholder="Aantal"  name="Aantal" required></div>
+                <div class="bestelaantalinvul"><input min="1" max="24" class="bestelaantal" type="number"  placeholder="Aantal" id="out3x" name="Aantal" required></div>
             </div>  
             </div> 
     <div class="bestelborder">
