@@ -14,7 +14,7 @@ if(!$_POST){
     $_POST['Aantal'] ?? 0;
 
     $insert = $mysqli->prepare($sql);
-    $insert->bind_param('isssssss', $_POST['Aantal'], $_POST['Voornaam'], $_POST['E-mail'], $_POST['Tussenvoegsel'], $_POST['Adres'], $_POST['Achternaam'], $_POST['Postcode'], $_POST['Telefoonnummer']);
+    $insert->bind_param('issssssi', $_POST['Aantal'], $_POST['Voornaam'], $_POST['E-mail'], $_POST['Tussenvoegsel'], $_POST['Adres'], $_POST['Achternaam'], $_POST['Postcode'], $_POST['Telefoonnummer']);
     
     
     if ($insert->execute())  {
@@ -48,7 +48,6 @@ if(!$_POST){
 
           mail($mailTo, $onderwerp, $txt, $txtaantal);
          header("Location: Bestel.html?mailsend");
-
     } else {
         die("Error: {$mysqli->errno} : {$mysqli->error}");
     }
