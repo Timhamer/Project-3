@@ -112,7 +112,8 @@ color: grey;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
-    margin-top: 4%;
+    margin-top: 2%;
+    margin-left: 17%;
   }
   
   .content-table thead tr {
@@ -635,7 +636,7 @@ color: grey;
   margin-bottom: 3%;
 }
 
-.logoutbtn input {
+.logoutbtn{
   background-color: #101010;
   font-family: 'Montserrat';
   border: none;
@@ -661,3 +662,45 @@ color: grey;
   background-color: #98FB98;
   border-color: #99FB99;
 }
+
+.button_af{
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 10%;
+  cursor: pointer;
+  margin: 2% 0 0 50%; 
+  color: black;
+  height: 40px;
+  
+}
+.button_af:hover{
+  color: white;
+  background-color:black;
+}
+
+.button_on{
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 10%;
+  cursor: pointer;
+  margin: 2% 0 0 37%; 
+  color: black;
+  height: 40px;
+  position: absolute;
+  
+}
+.button_on:hover{
+  color: white;
+  background-color:black;
+}
+
+.logoutbtn:hover{
+
+  color: grey;
+} 
+
+
