@@ -57,7 +57,7 @@ $ACCOUNTID = $_SESSION['id'];
     <div class="nieuweorderborder">
         <div class="nieuweorderinhoud">
             <h2>Aantal biertjes</h2><input class="nieuweordergegevens" type="text"  placeholder="Aantal"  name="Aantal" required>
-            <h2>Adres</h2><input class="nieuweordergegevens" value="<?=$result['Adres']  ?>" type="text"  placeholder="Adres"  name="Adres" required><br>
+            <h2>Adres</h2><input class="nieuweordergegevens"  type="text"  placeholder="Adres"  name="Adres" required><br>
             <button name="submit" type="submit" class="nieuweorderbutton">Bestelling toevoegen</button>
             
         </div>
