@@ -21,8 +21,8 @@
           <a href="nieuweorder.php"><li>Bestellen</li></a>
           <a href="orderoverzicht.php"><li>Overzicht</li></a>
           <a href="gegevens.php"><li>Gegevens</li></a>
-          <a><li> <form class="logoutbtn" method='post' action="">
-            <input type="submit" value="Log uit" name="but_logout">
+          <a><li> <form  method='post' action="">
+            <input class="logoutbtn" type="submit" value="Log uit" name="but_logout">
         </form></li></a>
         </ul>
       <script>

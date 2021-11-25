@@ -636,7 +636,7 @@ color: grey;
   margin-bottom: 3%;
 }
 
-.logoutbtn input {
+.logoutbtn{
   background-color: #101010;
   font-family: 'Montserrat';
   border: none;
@@ -697,3 +697,10 @@ color: grey;
   color: white;
   background-color:black;
 }
+
+.logoutbtn:hover{
+
+  color: grey;
+} 
+
+
