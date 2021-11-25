@@ -1,6 +1,5 @@
 <?php include "header.php"
 
-$p = "1.50"
 
 
 ?>

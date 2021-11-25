@@ -19,9 +19,9 @@
       <div class="navbar">
         <ul>
           <a href="klantenoverzicht.php"><li>Klanten overzicht</li></a>
-          <a href="overzicht.php"><li>Order overzicht</li></a>
-          <a><li> <form class="logoutbtn" method='post' action="">
-            <input type="submit" value="Log uit" name="but_logout">
+          <a href="overzicht.php"><li>overzicht</li></a>
+          <a><li> <form method='post' action="">
+            <input class="logoutbtn" type="submit" value="Log uit" name="but_logout">
         </form></li></a>
         </ul>
       <script>

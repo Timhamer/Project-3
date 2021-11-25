@@ -112,7 +112,8 @@ color: grey;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
-    margin-top: 4%;
+    margin-top: 2%;
+    margin-left: 17%;
   }
   
   .content-table thead tr {
@@ -188,6 +189,8 @@ color: grey;
   height: 25px;
 }
 
+
+
 .bestelaantaltekst{
   margin: 5% 10% 0 -190%;  
 
@@ -217,7 +220,7 @@ color: grey;
     border: black;
     border-style: solid;
     border-width: 5px;
-    margin:0 2% 0 2%; 
+    margin:5% 10% 5% 10%; 
     padding: 0 0 50px 0;
     border-radius: 20px;
   }
@@ -226,7 +229,7 @@ color: grey;
     border: black;
     border-style: solid;
     border-width: 5px;
-    margin:0 2% 0 2%; 
+    margin:5% 10% 5% 10%; 
     padding: 25px 0 50px 0;
     border-radius: 20px;
   }
@@ -235,47 +238,11 @@ color: grey;
     margin-left: 20px;
   }
 
-  @media screen and (min-width: 745px) {
-    .bestelborder {
-      border-color: pink;
-      border: black;
-      border-style: solid;
-      border-width: 5px;
-      margin:0 10% 0 10%; 
-      padding: 0 0 50px 0;
-      border-radius: 20px;
-    }
+ 
       .bestelaantalborder {
-        margin: 0 10% 0 10%;
+        margin: 5% 10% 5% 10%;
     }
-  }
-    @media screen and ( min-width: 1000px) {
-      .bestelborder {
-        border-color: black;
-        border: black;
-        border-style: solid;
-        border-width: 5px;
-        margin:0 30% 0 30%; 
-        padding: 0 0 50px 0;
-        border-radius: 20px;
-      }
-      .bestelaantalborder {
-        margin:0 30% 0 30%; 
-      }
-    }
-    @media screen and ( min-width: 450px) {
-      .bestelcolumntekst {
-        float: left;
-        width: 40%;
-        margin-top: 0%;
-        padding: 50px 5% 0 5%; 
-        text-align: center;
-        font-size: normal;
-      }
-      .bestelbtn{
-        height: 40px;
-      }
-      }
+ 
   
   /* klanten overzicht */
   .password {
@@ -635,7 +602,7 @@ color: grey;
   margin-bottom: 3%;
 }
 
-.logoutbtn input {
+.logoutbtn{
   background-color: #101010;
   font-family: 'Montserrat';
   border: none;
@@ -661,3 +628,45 @@ color: grey;
   background-color: #98FB98;
   border-color: #99FB99;
 }
+
+.button_af{
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 10%;
+  cursor: pointer;
+  margin: 2% 0 0 50%; 
+  color: black;
+  height: 40px;
+  
+}
+.button_af:hover{
+  color: white;
+  background-color:black;
+}
+
+.button_on{
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 10%;
+  cursor: pointer;
+  margin: 2% 0 0 37%; 
+  color: black;
+  height: 40px;
+  position: absolute;
+  
+}
+.button_on:hover{
+  color: white;
+  background-color:black;
+}
+
+.logoutbtn:hover{
+
+  color: grey;
+} 
+
+

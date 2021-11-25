@@ -1,7 +1,7 @@
 
 <?php
 error_reporting(0);
-include "header.html";?>
+include "header.php";?>
 
 <form method="POST" action= "">
 <button type="submit" name="onafgerond" class="button_on" value="false"> Onafgerond </button>
