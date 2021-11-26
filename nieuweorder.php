@@ -12,7 +12,7 @@ $ACCOUNTID = $_SESSION['id'];
 
         if (isset($_POST['Aantal'], $_POST['Adres'])) {
 
-            if ($_POST['Aantal'] > 0) {
+            if ($_POST['Aantal'] > 0){
 
             $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Adres`, `Userid`) VALUES (?,?,?)";
 
@@ -34,6 +34,7 @@ $ACCOUNTID = $_SESSION['id'];
         }
         }
     }
+    
     $stmt = $mysqli->prepare('SELECT `Adres` FROM `bestelformulier` WHERE `Userid` = ?');
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
@@ -56,7 +57,7 @@ $ACCOUNTID = $_SESSION['id'];
     <form action="nieuweorder.php" method="post">
     <div class="nieuweorderborder">
         <div class="nieuweorderinhoud">
-            <h2>Aantal biertjes</h2><input class="nieuweordergegevens" type="text"  placeholder="Aantal"  name="Aantal" required>
+            <h2>Aantal biertjes</h2><input min="1" max="250" class="nieuweordergegevens" type="number"  placeholder="Aantal"  name="Aantal" required>
             <h2>Adres</h2><input class="nieuweordergegevens"  type="text"  placeholder="Adres"  name="Adres" required><br>
             <button name="submit" type="submit" class="nieuweorderbutton">Bestelling toevoegen</button>
             
