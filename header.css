@@ -22,6 +22,7 @@ body {
   height: 100%;
   margin: 0 auto;
   background-color: #101010;
+  
 }
 
 .logo_container {
@@ -72,6 +73,7 @@ color: grey;
 
 #check {
   display: none;
+  position: relative;
 }
 
 .checkbtn {
@@ -88,7 +90,7 @@ color: grey;
     }
     }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: 700px) {
     #check {
       display: block;
       right: 4%;
@@ -192,7 +194,7 @@ color: grey;
 
 
 .bestelaantaltekst{
-  margin: 5% 10% 0 -190%;  
+  margin: 5% 0% 0 0%;  
 
 }
 
@@ -400,11 +402,32 @@ color: grey;
   border: black;
   border-style: solid;
   border-width: 5px;
-  margin:10% 40% 0 40%; 
+  margin:10% 10% 0 10%; 
   padding: 10px 0 30px 0;
   border-radius: 20px;
 }
-.nieuweorderinhoud{
+
+@media screen and ( min-width: 600px) {
+  .nieuweorderborder{
+    border-color: black;
+    border: black;
+    border-style: solid;
+    border-width: 5px;
+    margin:10% 20% 0 20%; 
+    padding: 10px 0 30px 0;
+    border-radius: 20px;
+  }}
+  @media screen and ( min-width: 1000px) {
+    .nieuweorderborder{
+      border-color: black;
+      border: black;
+      border-style: solid;
+      border-width: 5px;
+      margin:10% 40% 0 40%; 
+      padding: 10px 0 30px 0;
+      border-radius: 20px;
+    }}
+  .nieuweorderinhoud{
   margin-left: 5%;
   font-family: Montserrat;
   padding-top: 20xpx;
