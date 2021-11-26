@@ -2,6 +2,9 @@
 include "header.php";
 include "config.php";
 
+
+
+
 $ACCOUNTID = $_SESSION['id'];
     $mysqli = new mysqli("localhost","root","","biermanagement");
     
@@ -12,12 +15,31 @@ $ACCOUNTID = $_SESSION['id'];
 
         if (isset($_POST['Aantal'], $_POST['Adres'])) {
 
+
+        
+
+
+            $sql = "SELECT  Email, Naam, Tel FROM users WHERE id='$ACCOUNTID'";
+
+            $result = $mysqli->query($sql) or die($mysqli->error);
+            
+            
+                while($row = $result->fetch_assoc()) {
+            
+            
+                $naam = $row['Naam'];
+                $email= $row['Email'];
+                $tel = $row['Tel'];
+            }
+
+
+
             if ($_POST['Aantal'] > 0) {
 
-            $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Adres`, `Userid`) VALUES (?,?,?)";
+            $sql = "INSERT INTO `bestelformulier`(`Aantal`, `Adres`, `Userid`, `Voornaam`, `E-mail`, `Telefoonnummer`) VALUES (?,?,?,?,?,?)";
 
             $insert = $mysqli->prepare($sql);
-            $insert->bind_param('isi', $_POST['Aantal'], $_POST['Adres'], $_SESSION['id']);
+            $insert->bind_param('isisss', $_POST['Aantal'], $_POST['Adres'], $_SESSION['id'], $naam, $email, $tel );
             
             
             if ($insert->execute())  {
@@ -57,10 +79,8 @@ $ACCOUNTID = $_SESSION['id'];
     <div class="nieuweorderborder">
         <div class="nieuweorderinhoud">
             <h2>Aantal biertjes</h2><input class="nieuweordergegevens" type="text"  placeholder="Aantal"  name="Aantal" required>
-            <h2>Adres</h2><input class="nieuweordergegevens" value="<?=$result['Adres']  ?>" type="text"  placeholder="Adres"  name="Adres" required><br>
+            <h2>Adres</h2><input class="nieuweordergegevens" type="text"  placeholder="Adres"  name="Adres" required><br>
             <button name="submit" type="submit" class="nieuweorderbutton">Bestelling toevoegen</button>
-            <p>Als u geen adres invult komt</p>
-            <p>het adres van uw account</p>
         </div>
     </div>
     </form>

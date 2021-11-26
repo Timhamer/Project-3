@@ -26,7 +26,7 @@ if(isset($_POST['but_submit'])){
             //succes
             $_SESSION['id'] = $countid;
             $_SESSION['rol'] = $countrol;
-            header("Location:home.php");
+            header("Location:home.php?username=$uname");
              exit();   
         }
         else {

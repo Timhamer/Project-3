@@ -25,7 +25,7 @@ if ($mysqli -> connect_errno) {
 
 
 $sql = "SELECT * FROM bestelformulier WHERE userid = $_ACCOUNTID";
- 
+
   if ($result = $mysqli->query($sql)) {
     foreach ($result as $row) {
     echo "
