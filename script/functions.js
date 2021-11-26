@@ -19,4 +19,4 @@ function saveInlineEdit(editableObj,column,id) {
 			$(editableObj).css("background","#FDFDFD");			
 		}          
    });
-}
+} 

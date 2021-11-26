@@ -11,7 +11,7 @@ if ($mysqli -> connect_errno) {
 }
 
 
-$sql = "UPDATE `bestelformulier` SET `Status` = 1 WHERE `id` = $_GET[id]";
+$sql = "UPDATE `bestelformulier1` SET `Status` = 1 WHERE `id` = $_GET[id]";
 
 if ($mysqli->query($sql)){
     echo $mysqli->affected_rows;

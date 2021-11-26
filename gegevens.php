@@ -35,6 +35,6 @@ $row = mysqli_fetch_array($sql)
         <h2 class="gegevensnaam">Telefoonnummer:</h2>
         <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Tel'];?> "onBlur="saveInlineEdit(this,'Tel', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Tel']; ?></h2>
         <h2 class="gegevensnaam">E-mail:</h2>
-        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Email'];?> "onBlur="saveInlineEdit(this,'Email', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Email']; ?></h2>
+        <h2 class="data" contenteditable="true" onkeydown="return (event.keyCode!=13);" data-old_value="><?php echo $row['Email'];?> "onBlur="saveInlineEdit(this,'Email ', '<?php echo $row['id']; ?> ')" onClick="highlightEdit(this);"><?php echo $row['Email']; ?></h2>
     </div>
 </body>

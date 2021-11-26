@@ -56,6 +56,7 @@ $ACCOUNTID = $_SESSION['id'];
         }
         }
     }
+    
     $stmt = $mysqli->prepare('SELECT `Adres` FROM `bestelformulier` WHERE `Userid` = ?');
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
