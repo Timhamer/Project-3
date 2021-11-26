@@ -47,7 +47,7 @@ if(!$_POST){
          
 
           mail($mailTo, $onderwerp, $txt, $txtaantal);
-         header("Location: Bestel.html?mailsend");
+         header("Location: Bestellen.php?mailsend");
     } else {
         die("Error: {$mysqli->errno} : {$mysqli->error}");
     }
