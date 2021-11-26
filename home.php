@@ -2,7 +2,6 @@
 include "config.php";
 
 
-
 if($_SESSION['rol'] == 1){
     header("location:klantenoverzicht.php");
     exit();
