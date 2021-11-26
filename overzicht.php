@@ -80,11 +80,6 @@ echo "
   $result -> free_result();
 }
 
-if($row['Status'] == 0){
-  
-}
-
-
 $mysqli -> close();
 
 $mysqli = new mysqli("localhost","root","","biermanagement");

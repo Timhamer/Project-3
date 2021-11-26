@@ -6,15 +6,15 @@ if(isset($_POST['but_submit'])){
     $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
     $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
 
-    $id = "SELECT id AS idcount FROM users WHERE naam='".$uname."' and wachtwoord='".$password."'";
+    $id = "SELECT id AS countid FROM users WHERE naam='".$uname."' and wachtwoord='".$password."'";
     $resultid = mysqli_query($con,$id);
     $rowid = mysqli_fetch_array($resultid);
-    $countid = $rowid['idcount'];
+    $countid = $rowid['countid'] ?? null;
 
-    $rol = "select rol as rolcount from users where naam='".$uname."' and wachtwoord ='".$password."'";
+    $rol = "SELECT rol AS countrol FROM users WHERE naam='".$uname."' and wachtwoord ='".$password."'";
     $resultrol = mysqli_query($con,$rol);
     $rowrol = mysqli_fetch_array($resultrol);
-    $countrol = $rowrol['rolcount'];
+    $countrol = $rowrol['countrol'] ?? null;
 
     if($uname != "" && $password != ""){
 
