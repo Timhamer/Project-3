@@ -9,53 +9,54 @@
     <link rel="stylesheet" href="header.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
+
+    <script>
+            function mult(value){
+                var x, y ;
+
+                 var x = 0.53 * value + 2.50 * value  ;
+
+
+                if(x>25) {
+                    var y = 5;
+
+
+                } else {
+
+                    if (x<1) {
+                        var y = 0.00;
+                    } else {
+                    var y = 7.50;
+
+
+                 }
+                }
+
+
+                 x = x.toFixed(2);
+                 y = y.toFixed(2);
+
+
+
+                document.getElementById('out1x').value = x;
+                document.getElementById('out3x').value = y;
+
+
+            }
+        </script>
+
 </head>
 
 
 <body>    
 
-
-<script>
-            function mult(value){
-                var x, y, z ;
-
-                var x = 0.53 * value ;
-                x = x.toFixed(2);
-
-                var y = 1.75 * value ;
-                y = y.toFixed(2);
-
-
-                if(y>38) {
-                    var z = 15;
-                    z = z.toFixed(2);
-                 } else if (y>38){
-                    var z = 15;
-                    z = z.toFixed(2);
-
-                 }  else {
-                    var z = 7.50;
-
-                    z = z.toFixed(2);
-
-                 }
-
-
-                document.getElementById('out2x').value = x;
-                document.getElementById('out3x').value = y;
-                document.getElementById('out4x').value = z;
-
-
-            }
-</script>
-    
     <form action="Bestel.php" method="post">
         
     <div class="bestelaantalborder">
         <div class="informatietekst">
             <h4>Bier de Boer</h4>
             <p>Speciaal bier special van Frans de boer.</p>
-            <p>- 1 biertje = 2.50 euro</p>
+            <p id="out2x">- 1 biertje = 2.50 + 21% btw euro</p>
             <p>- onder de 25 euro geldt een verzendtarief van 7,50 euro.</p>
             <p>- Vanaf 25 euro is het eenmalig 5 euro.</p>
             <p>- Max 24 biertjes</p>
@@ -64,10 +65,15 @@
             <div class="bestelaantalrow">
                 <div class="bestelaantaltekst"><h2>Aantal</h2></div>
 
-                <div class="">Totaal = <?php echo $t ?></div>
+                <p class="geld">prijs inc. btw: &euro; <input type="number" id="out1x" class="prijs" value="0" name="totaalprijs" readonly> </p> <br>
+            <p class="geld">verzendkosten: + &euro; <input type="number" id="out3x" class="prijs" value="0" name="verzendkosten" readonly> </p>
+
+
+
             </div>
             <div class="bestelaantalrow">
-                <div class="bestelaantalinvul"><input min="1" max="24" class="bestelaantal" type="number"  placeholder="Aantal" id="out3x" name="Aantal" required></div>
+            <input type="number" min="1" max="24" class="input aantal" onkeyup="mult(this.value)" name="aantal" placeholder="Aantal" required> 
+            <button name="submit" type="submit" class="input button">Bestel</button> <br> <br> <br>
             </div>  
             </div> 
     <div class="bestelborder">
