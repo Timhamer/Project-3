@@ -1,9 +1,9 @@
 <?php
 session_start();
 $host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "biermanagement";
+$user = "deb85590_p21t3";
+$password = "Rg0psrMdv0";
+$dbname = "deb85590_p21t3";
 
 $con = mysqli_connect($host, $user, $password, $dbname);
 if(!$con) {
