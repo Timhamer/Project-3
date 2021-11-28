@@ -1,6 +1,6 @@
 <?php
 
-echo $_GET['id'];
+$id= $_GET['id'];
 
 // update query maken met id er in
 $mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
@@ -11,13 +11,58 @@ if ($mysqli -> connect_errno) {
 }
 
 
-$sql = "UPDATE `bestelformulier1` SET `Status` = 1 WHERE `id` = $_GET[id]";
+$sql = "UPDATE `bestelformulier` SET `Status` = 1 WHERE `id` = $_GET[id]";
 
 if ($mysqli->query($sql)){
     echo $mysqli->affected_rows;
-    header("location: overzicht.php");
+  
+   
 }
 
+
+$update = $mysqli->query($sql) ;
+
+if ( $update ){
+
+    $sql1 = "SELECT  Voornaam, `E-mail` FROM `bestelformulier` WHERE id = $id";
+
+    $result = $mysqli->query($sql1) or die($mysqli->error);
+
+    while($row = $result->fetch_assoc()) {
+
+
+        $naam = $row['Naam'];
+        $email= $row['E-mail'];
+
+        }
+
+
+    $to = "$email";
+    $subject = "Bierbrouwerij DE BOER";
+
+    $BOUNDARY="anystring";
+
+    $headers =<<<END
+    From: <t88577457@gmail.com>
+    Content-Type: multipart/mixed; boundary=$BOUNDARY
+    END;
+
+    $body =<<<END
+    --$BOUNDARY
+    Content-Type: text/plain
+
+    U bestelling #$id is verzonden.
+    levertijd : 2-3 werkdagen.
+
+    END;
+
+
+    mail( $to, $subject, $body, $headers );
+    header("location: overzicht.php");
+
+}
+
+echo $mysqli->error;
 echo $mysqli->error;
 
 
