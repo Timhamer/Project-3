@@ -22,7 +22,7 @@ if ($mysqli -> connect_errno) {
 //$sql = "SELECT * FROM bestelformulier ORDER BY Aantal";
 
 
-$sql = "SELECT * FROM `bestelformulier`";
+$sql = "SELECT * FROM bestelformulier";
 
 if($_POST['afgerond'] == true) {
   $sql = $sql . "ORDER BY Status DESC";
