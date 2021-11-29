@@ -65,7 +65,6 @@ $ACCOUNTID = $_SESSION['id'];
 
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
