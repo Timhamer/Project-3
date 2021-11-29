@@ -10,7 +10,7 @@ include "header2.php";?>
 <button type="submit" name="afgerond" class="button_af" value="true"> Afgerond </button>
 </form>
 <?php
- $mysqli = new mysqli("localhost","root","","biermanagement");
+ $mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
 
 
 if ($mysqli -> connect_errno) {
@@ -81,7 +81,7 @@ echo "
 
 $mysqli -> close();
 
-$mysqli = new mysqli("localhost","root","","biermanagement");
+$mysqli = new mysqli("localhost","deb85590_p21t3","Rg0psrMdv0","deb85590_p21t3");
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
