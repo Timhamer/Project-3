@@ -73,7 +73,7 @@
 
             </div>
             <div class="bestelaantalrow">
-            <input type="number" min="1" max="24" class="input aantal" onkeyup="mult(this.value)" name="aantal" placeholder="Aantal" required> 
+            <input type="number" min="1" max="24" class="input aantal" onkeyup="mult(this.value)" name="Aantal" placeholder="Aantal" required> 
             <button name="submit" type="submit" class="input button">Bestel</button> <br> <br> <br>
             </div>  
             </div> 

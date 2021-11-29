@@ -4,8 +4,7 @@
 if(!$_POST){
   (header("location: Bestel.html"));
 }
-$mysqli = new mysqli("localhost","root","","biermanagement");
-    
+$mysqli = new mysqli("localhost","root","","biermanagement");    
     if ( $mysqli->connect_error ) {
         die( 'Connect Error: ' . $mysqli->connect_errno . ': ' . $mysqli->connect_error );
     }
