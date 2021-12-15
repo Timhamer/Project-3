@@ -35,7 +35,7 @@ $sql = "SELECT * FROM bestelformulier WHERE userid = $_ACCOUNTID";
         <td>". $row['E-mail'] .  "</td>
         <td> " . $row['Telefoonnummer'] . "</td>";
  
-         echo "";
+         echo "";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
       
  
     
